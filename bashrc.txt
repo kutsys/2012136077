@@ -1,70 +1,78 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-·Î±×ÀÎµÇÁö ¾ÊÀº ½©¿¡¼­ bash°¡ ½ÇÇàµÇ¾úÀ» ¶§
+ë¡œê·¸ì¸ë˜ì§€ ì•Šì€ ì‰˜ì—ì„œ bashê°€ ì‹¤í–‰ë˜ì—ˆì„ ë•Œ
 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
 # If not running interactively, don't do anything
-»óÈ£ÀûÀ¸·Î ½ÇÇàµÇÁö ¾ÊÀ¸¸é ¾Æ¹«°Íµµ ÇÏÁö ¸» °Í.
+ìƒí˜¸ì ìœ¼ë¡œ ì‹¤í–‰ë˜ì§€ ì•Šìœ¼ë©´ ì•„ë¬´ê²ƒë„ í•˜ì§€ ë§ ê²ƒ.
 
 case $- in
     *i*) ;;
       *) return;;
 esac
-º¯¼ö¿¡ µé¾îÀÖ´Â °ªÀ» ÂüÁ¶ÇÏ¿© ÄÉÀÌ½º¹®
+ë³€ìˆ˜ì— ë“¤ì–´ìˆëŠ” ê°’ì„ ì°¸ì¡°í•˜ì—¬ ì¼€ì´ìŠ¤ë¬¸
 
 # don't put duplicate lines or lines starting with space in the history.
-È÷½ºÅä¸®¿¡ Áßº¹µÇ´Â ÁÙÀÌ³ª °ø¹éÀ¸·Î ½ÃÀÛÇÏ´Â ÁÙÀ» ³ÖÁö ¸» °Í.
+íˆìŠ¤í† ë¦¬ì— ì¤‘ë³µë˜ëŠ” ì¤„ì´ë‚˜ ê³µë°±ìœ¼ë¡œ ì‹œì‘í•˜ëŠ” ì¤„ì„ ë„£ì§€ ë§ ê²ƒ.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
-È÷½ºÅä¸® ÆÄÀÏ¿¡ Ãß°¡ÇÏ°í µ¤¾î¾²Áö ¸¶¶ó.
+íˆìŠ¤í† ë¦¬ íŒŒì¼ì— ì¶”ê°€í•˜ê³  ë®ì–´ì“°ì§€ ë§ˆë¼.
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-È÷½ºÅä¸® ±æÀÌ¸¦ ¼¼ÆÃÇÏ·Á¸é bash¿¡ ÀÖ´Â HISTSIZE¿Í HISTFILESIZE¸¦ º¸¶ó.
+íˆìŠ¤í† ë¦¬ ê¸¸ì´ë¥¼ ì„¸íŒ…í•˜ë ¤ë©´ bashì— ìˆëŠ” HISTSIZEì™€ HISTFILESIZEë¥¼ ë³´ë¼.
 HISTSIZE=1000
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
-ÇÊ¿äÇÏ´Ù¸é °¢ ¸í·É¾î ÀÌÈÄ¿¡ À©µµ¿ì »çÀÌÁî¸¦ Ã¼Å©ÇÏ¶ó.
+í•„ìš”í•˜ë‹¤ë©´ ê° ëª…ë ¹ì–´ ì´í›„ì— ìœˆë„ìš° ì‚¬ì´ì¦ˆë¥¼ ì²´í¬í•˜ë¼.
 # update the values of LINES and COLUMNS.
-ÁÙ°ú ¿­ÀÇ °ªÀ» ÃÖ½ÅÈ­ÇÏ¶ó.
+ì¤„ê³¼ ì—´ì˜ ê°’ì„ ìµœì‹ í™”í•˜ë¼.
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
-¼¼ÆÃµÇ¾î ÀÖ´Ù¸é, ÆĞ½º ÀÌ¸§ È®ÀåÀ¸·Î »ç¿ëµÈ ** ÆĞÅÏÀº ¸ğµç ÆÄÀÏ È¤Àº 0°³ È¤Àº ´õ ¸¹Àº µğ·ºÅä¸®¿Í ¼­ºêµğ·ºÅä¸®¿¡ ¸ÅÄªµÈ´Ù.
+ì„¸íŒ…ë˜ì–´ ìˆë‹¤ë©´, íŒ¨ìŠ¤ ì´ë¦„ í™•ì¥ìœ¼ë¡œ ì‚¬ìš©ëœ ** íŒ¨í„´ì€ ëª¨ë“  íŒŒì¼ í˜¹ì€ 0ê°œ í˜¹ì€ ë” ë§ì€ ë””ë ‰í† ë¦¬ì™€ ì„œë¸Œë””ë ‰í† ë¦¬ì— ë§¤ì¹­ëœë‹¤.
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-³íÅØ½ºÆ® ÀÔ·Â ÆÄÀÏ¿¡ Á» ´õ ¸Ö¾îÁö·Á¸é lesspipe¸¦ º¸¶ó.
+ë…¼í…ìŠ¤íŠ¸ ì…ë ¥ íŒŒì¼ì— ì¢€ ë” ë©€ì–´ì§€ë ¤ë©´ lesspipeë¥¼ ë³´ë¼.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-ÀÛ¾÷ÁßÀÎ chroot¸¦ ÆÇº°ÇÒ º¯¼ö¸¦ ¼¼ÆÃÇÏ¶ó.
+ì‘ì—…ì¤‘ì¸ chrootë¥¼ íŒë³„í•  ë³€ìˆ˜ë¥¼ ì„¸íŒ…í•˜ë¼.
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-fancy ÇÁ·ÒÇÁÆ®¸¦ ¼¼ÆÃÇÏ¶ó(¿ì¸®°¡ ¿øÇÏ´Â »öÀ» ¸ğ¸£´Â °æ¿ì ¹«»ö)
+fancy í”„ë¡¬í”„íŠ¸ë¥¼ ì„¸íŒ…í•˜ë¼(ìš°ë¦¬ê°€ ì›í•˜ëŠ” ìƒ‰ì„ ëª¨ë¥´ëŠ” ê²½ìš° ë¬´ìƒ‰)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
-º¯¼ö°¡ °ø¹éÀÌ ¾Æ´Ñ °æ¿ì, °æ·Î°¡ ½ÇÇà°¡´ÉÇÏ¸é¼­ ¸í·É¾î°¡ ½ÇÇà °¡´ÉÇÑ °æ¿ì¸¦ ÆÇ´ÜÇÏ°í color_prompt¸¦ ¼³Á¤
+í„°ë¯¸ë„ ì‚¬ìš© ëŠ¥ë ¥ì´ ëœë‹¤ë©´, ìƒ‰ìƒ í”„ë¡¬í”„íŠ¸ì— ëŒ€í•œ ì½”ë©˜íŠ¸ë¥¼ í•˜ì§€ë§ˆë¼
 # off by default to not distract the user: the focus in a terminal window
+ìœ ì €ì—ê²Œ í˜¼ë€ì„ ì£¼ì§€ ì•Šê¸° ìœ„í•´ ê¸°ë³¸ ê°’ìœ¼ë¡œ í•´ë¼.
 # should be on the output of commands, not on the prompt
+í„°ë¯¸ë„ ìœˆë„ìš°ì—ì„œì˜ ì´ˆì ì€ í”„ë¡¬í”„íŠ¸ê°€ ì•„ë‹Œ ê²°ê³¼ë¬¼ì— ìˆì–´ì•¼ í•œë‹¤.
+
+
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
+	ìƒ‰ìƒì„ ì§€ì›í•œë‹¤. Ecma-48ë¥¼ ë”°ë¥¸ë‹¤ê³  ê°€ì •í•˜ë¼.
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	ê·¸ëŸ¬í•œ ì§€ì›ì˜ ë¶€ì¡±ì€ ê·¹ë„ë¡œ ë“œë¬¼ê³ ,
 	# a case would tend to support setf rather than setaf.)
+	ì—¬ëŸ¬ ê²½ìš°ëŠ” setfë³´ë‹¤ setafë¥¼ ì§€ì›í•˜ëŠ” ê²½í–¥ì´ ìˆë‹¤.
+	
 	color_prompt=yes
     else
 	color_prompt=
@@ -79,6 +87,7 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
+xterm ì„¤ì • ì¸ ê²½ìš° user@host:dirë¡œ ì œëª©ì„ ì„¤ì •í•œë‹¤.
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
@@ -88,6 +97,7 @@ xterm*|rxvt*)
 esac
 
 # enable color support of ls and also add handy aliases
+lsì˜ ìƒ‰ ì§€ì›ì„ ê°€ëŠ¥í•˜ê²Œ í•˜ê³ , ë˜í•œ ìœ ìš©í•œ ê°€ëª…(ëª…ë ¹)ë„ ë”í•˜ë¼
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -100,18 +110,25 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
+ì¥ê¸° ì‹¤í–‰ ëª…ë ¹ì„ ìœ„í•´ "ALERT" ê°€ëª…(ëª…ë ¹)ì„ ì¶”ê°€í•˜ë¼. ì´ë ‡ê²Œ
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
+ê°€ëª…(ëª…ë ¹) ì •ì˜
 # You may want to put all your additions into a separate file like
+ë‹¹ì‹ ì€ ì´ ê³³ì— ì§ì ‘ì ìœ¼ë¡œ ì²¨ê°€í•˜ëŠ” ëŒ€ì‹ ì— ~/.bash_aliases ê°™ì´ ë¶„ë¦¬ëœ íŒŒì¼ì—
 # ~/.bash_aliases, instead of adding them here directly.
+ë„ˆì˜ ì¶”ê°€ì‚¬í•­ì„ ë„£ê³  ì‹¶ì–´ í•  ì§€ë„ ëª¨ë¥¸ë‹¤.
+
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+bash-doc íŒ¨í‚¤ì§€ ì•ˆì˜ /usr/share/doc/bash-doc/examplesì„ ë³´ì•„ë¼
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -119,7 +136,10 @@ fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+í”„ë¡œê·¸ë¨ ì™„ì„± ê¸°ëŠ¥ì„ ì‚¬ìš©(ë§Œì¼ /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
+sources /etc/bash.bashrcì„ ì´ë¯¸ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤ë©´)
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -127,3 +147,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+// í”„ë¡¬í”„íŠ¸ ë³€ê²½ (ì‚¬ìš©ì ì´ë¦„ê³¼ í˜„ì¬ ë””ë ‰í† ë¦¬ë¥¼ ë‚˜íƒ€ë‚´ë„ë¡) //
+
+export PS1="[\u@ \w]\\$"
+
