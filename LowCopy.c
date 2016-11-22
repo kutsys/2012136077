@@ -11,7 +11,7 @@ int main()  {
   char block[1024];
   int in, out;
   int nread;
-  int count = 0;
+  int cnt = 0;
   
   //O_RDONLY : 읽기 전용으로 파일을 연다. 
 
