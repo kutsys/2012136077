@@ -34,17 +34,16 @@ void check_process(){
 	}else{
 		printf("running\n");
 	}
-	//5초에 한번씩 알람
-	alarm(5);
+	//5초 
+	sleep(5);
 }
 
-int main(int argc,char* argv[]){
-
-	char command=0;
+int main(int argc,char* argv[]){	
+char command=0;
 	int pid;
 	//프로세스 체크 함수 알람에 등록
 	signal(SIGALRM,check_process);
-	alarm(5);
+	sleep(5);
 
 	while(command != 'q'){
 		printf(">>");
