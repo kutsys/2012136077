@@ -10,7 +10,7 @@ int getPID(char *process_name){
 	FILE *fp;
 
 	//문자열 만들기
-	sprintf(cmd_result,"ps -eaf | grep -w %s | grep -v grep | awk '{print $2}'",process_name);
+	sprintf(cmd_result,"ps -ef | grep -w %s | grep -v grep | awk '{print $2}'",process_name);
 
 	//해당 문자열 실행
 	fp = popen(cmd_result,"r");
