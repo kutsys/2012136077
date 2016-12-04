@@ -10,7 +10,7 @@ int getPID(char *process_name){
 	FILE *fp;
 
 	//문자열 만들기
-	sprintf(cmd_result,"ps -ef | grep %s | grep -v grep " ,process_name);
+	sprintf(cmd_result,"ps -eaf | grep -w %s | grep -v grep | awk '{print $2}'",process_name);
 
 	//해당 문자열 실행
 	fp = popen(cmd_result,"r");
@@ -34,12 +34,13 @@ void check_process(){
 	}else{
 		printf("running\n");
 	}
-	//5초 
+	//5초에 한번씩 알람
 	alarm(5);
 }
 
-int main(int argc,char* argv[]){	
-char command=0;
+int main(int argc,char* argv[]){
+
+	char command=0;
 	int pid;
 	//프로세스 체크 함수 알람에 등록
 	signal(SIGALRM,check_process);
