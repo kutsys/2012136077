@@ -35,7 +35,7 @@ void check_process(){
 		printf("running\n");
 	}
 	//5초 
-	sleep(5);
+	alarm(5);
 }
 
 int main(int argc,char* argv[]){	
@@ -43,7 +43,7 @@ char command=0;
 	int pid;
 	//프로세스 체크 함수 알람에 등록
 	signal(SIGALRM,check_process);
-	sleep(5);
+	alarm(5);
 
 	while(command != 'q'){
 		printf(">>");
