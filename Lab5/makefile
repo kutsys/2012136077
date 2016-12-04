@@ -8,10 +8,11 @@ foo.o : foo.c
 	gcc -c -o foo.o foo.c
 
 boo.o : boo.c
-	gcc -c -o boo.o boo.
+	gcc -c -o boo.o boo.c
 	
 bar.o : bar.c
 	gcc -c -o bar.o bar.c
 
-clean : rm *.o mtest
+clean : 
+	rm *.o mtest
 
