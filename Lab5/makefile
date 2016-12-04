@@ -1,17 +1,16 @@
-mtest : mtest.o foo.o boo.o bar.o libmy.a
-	gcc -o mtest mtest.o -L. -lmy
+mtest : mtest.o foo.o boo.o bar.o
+	gcc -o mtest mtest.o foo.o boo.o bar.o
 
 mtest.o : mtest.c
 	gcc -c mtest.c
 
-libmy.a : foo.o boo.o bar.o
-	ar crv libmy.a foo.o boo.o bar.o
-
 foo.o : foo.c
-	gcc -c foo.c
+	gcc -c -o foo.o foo.c
 
 boo.o : boo.c
-	gcc -c boo.c
+	gcc -c -o boo.o boo.c
 bar.o : bar.c
-	gcc -c bar.c
+	gcc -c -o bar.o bar.c
+
+clean : rm *.o mtest
 
