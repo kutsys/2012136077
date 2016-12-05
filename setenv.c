@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 int main()    {
-  setenv("TEST_ENV", "1234", 0);
+  char *str = "TEST_ENV";
+  setenv(str, "1234", 0);
+  printf("%s = %s\n", str, getenv(str));
   return 0;
 }
