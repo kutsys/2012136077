@@ -56,7 +56,6 @@ int main(int argc,char* argv[]){
 			case 'Q':
 			case 'q':
 				printf("프로그램 종료\n");
-				command='q';
 				break;
 			case 'K':
 			case 'k':
